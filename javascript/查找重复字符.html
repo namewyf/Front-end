@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //查找字符串"abcoefoxyozzopp"中所有o出现的位置以及次数
+    // 核心算法：先查找第一个o出现的位置U然后只要index0f返回的结果不是-1就继续往后查
+    // 找因为indexOf只能查找到第一个，所以后面的查找，一定是当前索引加1，从而继续查找
+    var str = 'abcoefoxyozzopp';
+    var index = str.indexOf('o');
+    var i = 0;
+    while (index!=-1){
+        i ++;
+        console.log(index);
+        console.log(i);
+        index = str.indexOf('o',index + 1);
+
+    }
+</script>
+</html>
